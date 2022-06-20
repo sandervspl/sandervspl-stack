@@ -2,25 +2,13 @@ import * as i from 'types';
 import * as React from 'react';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import { type DehydratedState, Hydrate, QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
+import { withTRPC } from '@trpc/next';
+import { AppRouter } from './api/trpc/[trpc]';
 
 import '../styles/globals.css';
 
-const App: React.VFC<Props> = ({ Component, pageProps: { state, ...pageProps } }) => {
-  // This ensures that data is not shared between different users and requests,
-  // while still only creating the QueryClient once per component lifecycle.
-  const [queryClient] = React.useState(() => new QueryClient({
-    defaultOptions: {
-      queries: {
-        staleTime: 30 * 1000, // 30 seconds
-        cacheTime: 1000 * 6 * 10, // 10 minutes
-        retry: false,
-        notifyOnChangeProps: 'tracked',
-      },
-    },
-  }));
-
+const App: React.FC<Props> = ({ Component, pageProps: { state, ...pageProps } }) => {
   const getLayout = Component.layout || ((page) => page);
 
   return (
@@ -30,21 +18,34 @@ const App: React.VFC<Props> = ({ Component, pageProps: { state, ...pageProps } }
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" sizes="192x192" href="/favicon.ico" />
       </Head>
-      <QueryClientProvider client={queryClient}>
-        <Hydrate state={state}>
-          {getLayout(<Component {...pageProps} />)}
-        </Hydrate>
-        <ReactQueryDevtools position="bottom-right" />
-      </QueryClientProvider>
+      {getLayout(<Component {...pageProps} />)}
+      <ReactQueryDevtools position="bottom-right" />
     </>
   );
 };
 
 type Props = Omit<AppProps, 'pageProps'> & {
-  pageProps: i.AnyObject & {
-    state: DehydratedState;
-  };
+  pageProps: i.AnyObject;
   Component: i.NextPageComponent;
 };
 
-export default App;
+export default withTRPC<AppRouter>({
+  config({ ctx }) {
+    /**
+     * If you want to use SSR, you need to use the server's full URL
+     * @link https://trpc.io/docs/ssr
+     */
+    const url = process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}/api/trpc`
+      : 'http://localhost:3000/api/trpc';
+
+    return {
+      url,
+      // https://react-query.tanstack.com/reference/QueryClient
+      // queryClientConfig: { defaultOptions: { queries: { staleTime: 60 } } },
+    };
+  },
+  // https://trpc.io/docs/ssr
+  ssr: true,
+})(App);
+
