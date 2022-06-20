@@ -11,20 +11,14 @@ const Home: i.NextPageComponent = () => {
   }
 
   return (
-    <>
-      <div>
-        Created and maintained by
-        <a href="https://github.com/sandervspl"> @sandervspl </a>
-
-        <p>{data.greeting}</p>
-      </div>
-    </>
+    <div className="prose mx-auto mt-[20vw]">
+      <h1>Sandervspl Stack</h1>
+      Created and maintained by <a href="https://github.com/sandervspl">@sandervspl </a>
+      <p>TRPC: {data.greeting}</p>
+    </div>
   );
 };
 
-// This pattern makes it possible to create layouts which only mount once. Useful for sidebars etc.
-// You should only see a single "Layout mounted!" log in the console.
-// This is a similar pattern to wrapping a layout around routes with react-router
 Home.layout = (page) => {
   return (
     <Layout>{page}</Layout>
