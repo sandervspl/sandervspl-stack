@@ -32,9 +32,6 @@ const config = (phase, config) => {
       buildActivity: true,
       buildActivityPosition: 'bottom-left',
     },
-    compiler: {
-      styledComponents: true,
-    },
     experimental: {
       newLinkBehavior: true,
     },

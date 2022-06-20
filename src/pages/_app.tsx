@@ -9,6 +9,8 @@ import { ReactQueryDevtools } from 'react-query/devtools';
 import GlobalStyle from 'styles';
 import theme from 'styles/theme';
 
+import '../styles/globals.css';
+
 const App: React.VFC<Props> = ({ Component, pageProps: { state, ...pageProps } }) => {
   // This ensures that data is not shared between different users and requests,
   // while still only creating the QueryClient once per component lifecycle.
