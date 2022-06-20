@@ -22,6 +22,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': 5.28.0
   '@typescript-eslint/parser': 5.28.0
   autoprefixer: ^10.4.7
+  classnames: ^2.3.1
   daisyui: ^2.15.4
   eslint: 8.18.0
   eslint-config-next: 12.1.6
@@ -42,6 +43,7 @@ specifiers:
   prettier: ^2.7.1
   react: 18.2.0
   react-dom: 18.2.0
+  react-icons: ^4.4.0
   react-is: ^18.2.0
   react-query: 3.39.1
   sharp: 0.30.6
@@ -56,11 +58,13 @@ dependencies:
   '@trpc/next': 9.25.3_uh6lro2uvcz55p6qikxrpfi5oa
   '@trpc/react': 9.25.3_ms3at4dqhndwrpx5xroirjehyy
   '@trpc/server': 9.25.3
+  classnames: 2.3.1
   express: 4.18.1
   lodash: 4.17.21
   next: 12.1.6_4cc5zw5azim2bix77d63le72su
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-icons: 4.4.0_react@18.2.0
   react-is: 18.2.0
   react-query: 3.39.1_biqbaboplfbrettd7655fr4n2y
   sharp: 0.30.6
@@ -2873,6 +2877,10 @@ packages:
     engines: {node: '>=6.0'}
     dev: true
 
+  /classnames/2.3.1:
+    resolution: {integrity: sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==}
+    dev: false
+
   /clean-webpack-plugin/4.0.0_webpack@5.73.0:
     resolution: {integrity: sha512-WuWE1nyTNAyW5T7oNyys2EN0cfP2fdRxhxnIQWiAp0bMabPdHhoGxM8A6YL2GhqwgrPnnaemVE7nv5XJ2Fhh2w==}
     engines: {node: '>=10.0.0'}
@@ -5293,6 +5301,14 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+    dev: false
+
+  /react-icons/4.4.0_react@18.2.0:
+    resolution: {integrity: sha512-fSbvHeVYo/B5/L4VhB7sBA1i2tS8MkT0Hb9t2H1AVPkwGfVHLJCqyr2Py9dKMxsyM63Eng1GkdZfbWj+Fmv8Rg==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /react-is/16.13.1:
