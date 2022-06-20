@@ -2,12 +2,8 @@ import * as i from 'types';
 import * as React from 'react';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import { ThemeProvider } from 'styled-components';
 import { type DehydratedState, Hydrate, QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
-
-import GlobalStyle from 'styles';
-import theme from 'styles/theme';
 
 import '../styles/globals.css';
 
@@ -34,15 +30,12 @@ const App: React.VFC<Props> = ({ Component, pageProps: { state, ...pageProps } }
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" sizes="192x192" href="/favicon.ico" />
       </Head>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <QueryClientProvider client={queryClient}>
-          <Hydrate state={state}>
-            {getLayout(<Component {...pageProps} />)}
-          </Hydrate>
-          <ReactQueryDevtools position="bottom-right" />
-        </QueryClientProvider>
-      </ThemeProvider>
+      <QueryClientProvider client={queryClient}>
+        <Hydrate state={state}>
+          {getLayout(<Component {...pageProps} />)}
+        </Hydrate>
+        <ReactQueryDevtools position="bottom-right" />
+      </QueryClientProvider>
     </>
   );
 };

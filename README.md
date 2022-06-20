@@ -17,8 +17,7 @@ npm start
 * [NextJS](https://nextjs.org/)
 * [React](https://reactjs.org/)
 * [React Query](https://react-query.tanstack.com/overview)
-* [Styled-Components](https://www.styled-components.com)
-* [ESLint](http://eslint.org) to maintain a consistent code style
+* [tailwindcss](https://tailwindcss.com/)
 * Refer to `package.json` for more details
 
 ## NPM Scripts

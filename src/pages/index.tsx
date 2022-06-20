@@ -1,6 +1,5 @@
 import * as i from 'types';
 
-import { Anchor } from 'common';
 import PrimeLayout from 'layouts/PrimeLayout';
 
 const Home: i.NextPageComponent = () => {
@@ -8,9 +7,9 @@ const Home: i.NextPageComponent = () => {
     <>
       <p>
         Created by
-        <Anchor to="https://github.com/sandervspl"> @sandervspl </Anchor>
+        <a href="https://github.com/sandervspl"> @sandervspl </a>
         and maintained by
-        <Anchor to="https://labela.nl/"> LabelA</Anchor>
+        <a href="https://labela.nl/"> LabelA</a>
       </p>
     </>
   );
