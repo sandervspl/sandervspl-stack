@@ -48,4 +48,3 @@ export default withTRPC<AppRouter>({
   // https://trpc.io/docs/ssr
   ssr: true,
 })(App);
-

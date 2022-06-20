@@ -11,7 +11,7 @@ const Home: i.NextPageComponent = () => {
   }
 
   return (
-    <div className="prose mx-auto mt-[20vw]">
+    <div className="mx-auto mt-[20vw] prose">
       <h1>Sandervspl Stack</h1>
       Created and maintained by <a href="https://github.com/sandervspl">@sandervspl </a>
       <p>TRPC: {data.greeting}</p>
@@ -20,9 +20,7 @@ const Home: i.NextPageComponent = () => {
 };
 
 Home.layout = (page) => {
-  return (
-    <Layout>{page}</Layout>
-  );
+  return <Layout>{page}</Layout>;
 };
 
 export default Home;
