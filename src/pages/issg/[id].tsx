@@ -5,7 +5,7 @@ import {
 
 import { useRouter } from 'hooks';
 
-import PrimeLayout from 'layouts/PrimeLayout';
+import Layout from 'layouts/Layout';
 
 /**
  * iSSG (incremental static site generation) is a mix of SSG and SSR
@@ -32,7 +32,7 @@ const Page: i.NextPageComponent<Props> = ({ params }) => {
 
 Page.layout = (page) => {
   return (
-    <PrimeLayout>{page}</PrimeLayout>
+    <Layout>{page}</Layout>
   );
 };
 

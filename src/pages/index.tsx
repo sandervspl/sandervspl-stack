@@ -1,15 +1,13 @@
 import * as i from 'types';
 
-import PrimeLayout from 'layouts/PrimeLayout';
+import Layout from 'layouts/Layout';
 
 const Home: i.NextPageComponent = () => {
   return (
     <>
       <p>
-        Created by
+        Created and maintained by
         <a href="https://github.com/sandervspl"> @sandervspl </a>
-        and maintained by
-        <a href="https://labela.nl/"> LabelA</a>
       </p>
     </>
   );
@@ -20,7 +18,7 @@ const Home: i.NextPageComponent = () => {
 // This is a similar pattern to wrapping a layout around routes with react-router
 Home.layout = (page) => {
   return (
-    <PrimeLayout>{page}</PrimeLayout>
+    <Layout>{page}</Layout>
   );
 };
 

@@ -3,7 +3,7 @@ import type { GetServerSidePropsContext, InferGetServerSidePropsType } from 'nex
 
 import { getUser } from 'queries/example';
 
-import PrimeLayout from 'layouts/PrimeLayout';
+import Layout from 'layouts/Layout';
 
 /**
  * SSR (server-side rendering) dynamically renders the page on every request
@@ -23,7 +23,7 @@ const Page: i.NextPageComponent<Props, Queries> = ({ params }) => {
 
 Page.layout = (page) => {
   return (
-    <PrimeLayout>{page}</PrimeLayout>
+    <Layout>{page}</Layout>
   );
 };
 

@@ -1,16 +1,4 @@
-<p align="center">
-  <img src="https://github.com/LabelA/prime-monorepo/blob/main/prime-logo.png?raw=true" alt="prime-logo" width="250px" />
-</p>
-
-# React Web
-
-## Quick start
-Use [create-react-prime](https://www.npmjs.com/package/create-react-prime) for easy install.
-```
-npx create-react-prime@latest
-cd <project name>
-npm start
-```
+# Sandervspl Stack
 
 ## Features
 * [TypeScript](https://www.typescriptlang.org/)
@@ -74,5 +62,5 @@ The components are separated in `common`, `modules`, `layouts` and `pages`.
 ### Static Assets
 Any static assets, such as images and SVG, are now placed inside the `public` folder in their respective folder (i.e. `public/images` and `public/vectors`). Importing can be done simply by writing the relative URL (i.e. `/images/your-img.png`) in both CSS and JS. You can still import SVG files as a module
  ```ts
- import PrimeIcon from 'vectors/icon.svg';
+ import Icon from 'vectors/icon.svg';
  ```

@@ -3,7 +3,7 @@ import type { GetStaticPropsContext, InferGetStaticPropsType } from 'next';
 
 import { getUser } from 'queries/example';
 
-import PrimeLayout from 'layouts/PrimeLayout';
+import Layout from 'layouts/Layout';
 
 const userId = '3783ce59-0e59-4a77-aaaf-e824f7c5e8f1';
 
@@ -27,7 +27,7 @@ const Page: i.NextPageComponent<Props> = () => {
 
 Page.layout = (page) => {
   return (
-    <PrimeLayout>{page}</PrimeLayout>
+    <Layout>{page}</Layout>
   );
 };
 

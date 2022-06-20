@@ -3,11 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "description": "Repository of sandervspl-stack",
-  "author": "Label A B.V. [labela.nl]",
-  "url": "https://labela.nl/",
+  "author": "Sander Vispoel @sandervspl",
   "engines": {
-    "node": ">=14.7.0",
-    "npm": ">=7.8.0"
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
   },
   "scripts": {
     "start": "next dev -p $([ -f .port ] && cat .port || echo 3000)",

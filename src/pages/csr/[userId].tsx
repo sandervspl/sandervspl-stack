@@ -4,7 +4,7 @@ import * as React from 'react';
 import { getUser } from 'queries/example';
 import { useRouter } from 'hooks';
 
-import PrimeLayout from 'layouts/PrimeLayout';
+import Layout from 'layouts/Layout';
 
 /**
  * CSR (client-side rendering) renders the page on the client (the browser)
@@ -40,7 +40,7 @@ const Page: i.NextPageComponent = () => {
 
 Page.layout = (page) => {
   return (
-    <PrimeLayout>{page}</PrimeLayout>
+    <Layout>{page}</Layout>
   );
 };
 
