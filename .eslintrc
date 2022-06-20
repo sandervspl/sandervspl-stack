@@ -1,9 +1,18 @@
 {
-  "extends": ["plugin:@next/next/recommended", "prettier", ".eslintrc.base.json"],
+  "extends": [
+    "plugin:@next/next/recommended",
+    "prettier",
+    "plugin:tailwindcss/recommended",
+    ".eslintrc.base.json"
+  ],
+  "plugins": ["tailwindcss"],
   "globals": {
     "__DEV__": false,
     "__TEST__": false,
     "__ACC__": false,
     "__PROD__": false
+  },
+  "rules": {
+    "tailwindcss/no-custom-classname": [0]
   }
 }
