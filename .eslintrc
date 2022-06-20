@@ -1,8 +1,5 @@
 {
-  "extends": [
-    "plugin:@next/next/recommended",
-    ".eslintrc.base.json"
-  ],
+  "extends": ["plugin:@next/next/recommended", "prettier", ".eslintrc.base.json"],
   "globals": {
     "__DEV__": false,
     "__TEST__": false,
