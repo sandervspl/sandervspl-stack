@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "plugin:@next/next/recommended",
+    ".eslintrc.base.json"
+  ],
+  "globals": {
+    "__DEV__": false,
+    "__TEST__": false,
+    "__ACC__": false,
+    "__PROD__": false
+  }
+}
