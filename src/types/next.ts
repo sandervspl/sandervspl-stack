@@ -7,9 +7,9 @@ export type AugmentedNextPageContext<Query = {}> = O.Update<NextPageContext, 'qu
 
 // Augment the NextComponentType with our improved Context type and add types for our layout pattern
 export type NextPageComponent<Props = {}, Query = {}> = NextComponentType<
-  AugmentedNextPageContext<Query>,
-  {},
-  Props
+AugmentedNextPageContext<Query>,
+{},
+Props
 > & {
   layout?: (page: React.ReactElement) => React.ReactNode;
 };
