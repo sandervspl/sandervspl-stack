@@ -1,5 +1,5 @@
-import type { ParsedUrlQuery } from 'querystring';
 import { useRouter as useNextRouter } from 'next/router';
+import type { ParsedUrlQuery } from 'querystring';
 
 export const useRouter = <Queries extends ParsedUrlQuery = ParsedUrlQuery>() => {
   const router = useNextRouter();

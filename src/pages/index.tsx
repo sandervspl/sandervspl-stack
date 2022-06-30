@@ -1,7 +1,7 @@
 import * as i from 'types';
 
-import Layout from 'layouts/Layout';
 import { trpc } from 'hooks/trpc';
+import Layout from 'layouts/Layout';
 
 const Home: i.NextPageComponent = () => {
   const { data } = trpc.useQuery(['hello', { text: 'world!' }]);

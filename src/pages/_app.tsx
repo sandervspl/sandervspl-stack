@@ -2,11 +2,13 @@ import * as i from 'types';
 import * as React from 'react';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import { ReactQueryDevtools } from 'react-query/devtools';
 import { withTRPC } from '@trpc/next';
-import { AppRouter } from './api/trpc/[trpc]';
+import { ReactQueryDevtools } from 'react-query/devtools';
+
+import { useRouter } from 'hooks';
 
 import '../styles/globals.css';
+import { AppRouter } from './api/trpc/[trpc]';
 
 const App: React.FC<Props> = ({ Component, pageProps: { state, ...pageProps } }) => {
   const getLayout = Component.layout || ((page) => page);
