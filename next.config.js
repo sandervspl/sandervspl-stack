@@ -37,6 +37,8 @@ const config = (phase, config) => {
       images: {
         allowFutureImage: true,
       },
+      legacyBrowsers: false,
+      browsersListForSwc: true,
     },
   };
 
