@@ -1,11 +1,29 @@
 {
+  "root": true,
+  "parser": "@typescript-eslint/parser",
   "extends": [
+    "react-app",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
     "plugin:@next/next/recommended",
     "prettier",
-    "plugin:tailwindcss/recommended",
-    ".eslintrc.base.json"
+    "plugin:tailwindcss/recommended"
   ],
   "plugins": ["tailwindcss"],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "ignorePatterns": ["**/dist/**/*.js", "**/.next/**/*.js"],
   "globals": {
     "__DEV__": false,
     "__TEST__": false,
@@ -13,6 +31,60 @@
     "__PROD__": false
   },
   "rules": {
-    "tailwindcss/no-custom-classname": [0]
+    "no-console": [
+      1,
+      {
+        "allow": ["info", "error"]
+      }
+    ],
+    "prefer-const": 1,
+
+    "import/namespace": 0,
+    "import/no-anonymous-default-export": 0,
+    "import/no-unresolved": 0,
+    "import/named": 0,
+    "import/order": [
+      1,
+      {
+        "groups": ["builtin", "external", "internal", "index", "parent", "sibling"],
+        "pathGroups": [
+          {
+            "pattern": "types",
+            "group": "builtin",
+            "position": "before"
+          }
+        ]
+      }
+    ],
+
+    "jsx-a11y/anchor-is-valid": 0,
+
+    "react/jsx-pascal-case": 0,
+    "react/self-closing-comp": [
+      1,
+      {
+        "component": true,
+        "html": true
+      }
+    ],
+
+    "react-hooks/exhaustive-deps": 0,
+
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "@typescript-eslint/semi": ["error", "always"],
+    "@typescript-eslint/ban-ts-ignore": 0,
+    "@typescript-eslint/ban-ts-comment": 0,
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/explicit-member-accessibility": 0,
+    "@typescript-eslint/no-empty-interface": 0,
+    "@typescript-eslint/prefer-interface": 0,
+    "@typescript-eslint/no-use-before-define": 0,
+    "@typescript-eslint/no-object-literal-type-assertion": 0,
+    "@typescript-eslint/no-parameter-properties": 0,
+    "@typescript-eslint/no-non-null-assertion": 0,
+    "@typescript-eslint/camelcase": 0,
+    "@typescript-eslint/no-redeclare": 0,
+
+    "tailwindcss/no-custom-classname": 0
   }
 }
