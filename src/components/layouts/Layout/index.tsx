@@ -4,11 +4,11 @@ import Image from 'next/future/image';
 const Layout: React.FC<Props> = ({ children }) => {
   return (
     <>
-      <section className="py-0 px-2 leading-6 text-center">
+      <section className="py-0 px-2 text-center leading-6">
         {children}
         <a
           href="https://github.com/sandervspl/sandervspl-stack"
-          className="inline-block mt-4 w-5 h-5"
+          className="mt-4 inline-block h-5 w-5"
         >
           <Image
             src="/images/github-logo.png"

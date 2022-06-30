@@ -11,7 +11,7 @@ const Home: i.NextPageComponent = () => {
   }
 
   return (
-    <div className="mx-auto mt-[20vw] prose">
+    <div className="prose mx-auto mt-[20vw]">
       <h1>Sandervspl Stack</h1>
       Created and maintained by <a href="https://github.com/sandervspl">@sandervspl </a>
       <p>TRPC: {data.greeting}</p>
