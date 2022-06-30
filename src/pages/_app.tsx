@@ -5,8 +5,6 @@ import Head from 'next/head';
 import { withTRPC } from '@trpc/next';
 import { ReactQueryDevtools } from 'react-query/devtools';
 
-import { useRouter } from 'hooks';
-
 import '../styles/globals.css';
 import { AppRouter } from './api/trpc/[trpc]';
 
