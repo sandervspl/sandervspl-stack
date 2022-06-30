@@ -34,6 +34,9 @@ const config = (phase, config) => {
     },
     experimental: {
       newLinkBehavior: true,
+      images: {
+        allowFutureImage: true,
+      },
     },
   };
 
