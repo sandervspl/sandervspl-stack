@@ -60,15 +60,7 @@ const config = (phase, config) => {
         const rules = [
           {
             test: /\.svg$/,
-            oneOf: [
-              {
-                resourceQuery: /external/,
-                type: 'asset/inline',
-              },
-              {
-                use: ['@svgr/webpack'],
-              },
-            ],
+            use: ['@svgr/webpack'],
           },
         ];
 
@@ -79,22 +71,14 @@ const config = (phase, config) => {
           };
         }
 
-        config.module.rules = [
-          ...config.module.rules,
-          ...rules,
-        ];
-
+        config.module.rules = [...config.module.rules, ...rules];
 
         // Add plugins
         if (!config.plugins) {
           config.plugins = [];
         }
 
-        config.plugins = [
-          ...config.plugins,
-          new webpack.DefinePlugin(GLOBALS),
-        ];
-
+        config.plugins = [...config.plugins, new webpack.DefinePlugin(GLOBALS)];
 
         // Add tsconfig paths to webpack
         if (!config.resolve) {
@@ -103,9 +87,7 @@ const config = (phase, config) => {
           };
         }
 
-        config.resolve.plugins = [
-          ...config.resolve.plugins,
-        ];
+        config.resolve.plugins = [...config.resolve.plugins];
 
         return config;
       },
