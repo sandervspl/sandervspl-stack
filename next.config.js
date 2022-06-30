@@ -33,7 +33,6 @@ const config = (phase, config) => {
       buildActivityPosition: 'bottom-left',
     },
     experimental: {
-      newLinkBehavior: true,
       images: {
         allowFutureImage: true,
       },
