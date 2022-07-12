@@ -47,18 +47,10 @@
     "jsx-a11y/anchor-is-valid": 0,
 
     "react/jsx-pascal-case": 0,
-    "react/self-closing-comp": [
-      1,
-      {
-        "component": true,
-        "html": true
-      }
-    ],
 
     "react-hooks/exhaustive-deps": 0,
 
     "@typescript-eslint/explicit-module-boundary-types": 0,
-    "@typescript-eslint/semi": ["error", "always"],
     "@typescript-eslint/ban-ts-ignore": 0,
     "@typescript-eslint/ban-ts-comment": 0,
     "@typescript-eslint/explicit-function-return-type": 0,
